@@ -52,4 +52,9 @@ You only need a modern web browser to run this application.
     Alternatively, you can use a Live Server extension in VS Code for a better development experience.
 
 ## Project Structure
+├── index.html          # Main HTML file for the quiz interface
+├── style.css           # Custom CSS for styling and theme management
+└── script.js           # All JavaScript logic for quiz functionality
+├── README.md           # This file
+└── LICENSE             # Project license (e.g., MIT License)
 
