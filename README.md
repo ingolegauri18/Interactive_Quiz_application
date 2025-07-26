@@ -57,4 +57,25 @@ You only need a modern web browser to run this application.
 └── script.js           # All JavaScript logic for quiz functionality
 ├── README.md           # This file
 └── LICENSE             # Project license (e.g., MIT License)
+## Future Enhancements
+
+* Add more questions and categories to expand the quiz content.
+* Implement user authentication and leaderboards.
+* Integrate a backend to store quiz questions and user performance.
+* Allow users to create custom quizzes.
+* Add different difficulty levels for questions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+
+Gauri Ingole
+* **LinkedIn:** [https://www.linkedin.com/in/gauri-ingole-a65b9a27b](https://www.linkedin.com/in/gauri-ingole-a65b9a27b)
+* **Email:** ingolegauri18@gmail.com
+* **GitHub:** [https://github.com/ingolegauri18](https://github.com/ingolegauri18)
+
+Feel free to explore the code, provide feedback, or contribute to the project!
+
 
