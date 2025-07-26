@@ -1,0 +1,347 @@
+/* CSS Variables for Theming */
+:root {
+    /* Default Light Theme (Warm Palette) */
+    --color-bg-primary: #fdf8f5; /* Soft cream background */
+    --color-bg-card: #ffffff; /* White card background */
+    --color-text-primary: #4a2c00; /* Dark brown text */
+    --color-text-secondary: #7a5c32; /* Muted brown secondary text */
+    --color-accent-primary: #e67e22; /* Warm orange accent */
+    --color-accent-light: #fff3e6; /* Lighter orange for selected option bg */
+    --color-border-light: #f5e0cc; /* Soft border */
+    --color-option-bg: #fffaf0; /* Lightest cream for option buttons */
+    --color-option-hover: #faeddc; /* Slightly darker cream on hover */
+    --color-shadow-base: rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+    --color-question-text: #3d2a00; /* Darker brown for questions */
+    --color-score-display: #8a6d3b; /* Muted gold for score */
+    --color-stat-item: #7a5c32; /* Stat item labels */
+    --color-stat-value: #3d2a00; /* Stat item values */
+    --color-feedback-correct-bg: #d4edda; /* Green for correct (standard) */
+    --color-feedback-correct-text: #155724;
+    --color-feedback-correct-border: #28a745;
+    --color-feedback-incorrect-bg: #f8d7da; /* Red for incorrect (standard) */
+    --color-feedback-incorrect-text: #721c24;
+    --color-feedback-incorrect-border: #dc3545;
+    --color-mark-review-bg: #fff8e1; /* Light yellow for review */
+    --color-mark-review-text: #8a6d3b;
+    --color-mark-review-border: #e6b800;
+    --color-mark-review-active-shadow: rgba(230, 184, 0, 0.5);
+    --color-button-disabled-bg: #e0e0e0;
+    --color-button-disabled-text: #a0a0a0;
+    --color-progress-bar-bg: #f5e0cc;
+    --color-progress-bar-fill: #e67e22;
+}
+
+body.theme-light {
+    /* Light Theme - explicitly defined (same as root for this setup) */
+    --color-bg-primary: #fdf8f5;
+    --color-bg-card: #ffffff;
+    --color-text-primary: #4a2c00;
+    --color-text-secondary: #7a5c32;
+    --color-accent-primary: #e67e22;
+    --color-accent-light: #fff3e6;
+    --color-border-light: #f5e0cc;
+    --color-option-bg: #fffaf0;
+    --color-option-hover: #faeddc;
+    --color-shadow-base: rgba(0, 0, 0, 0.15);
+    --color-question-text: #3d2a00;
+    --color-score-display: #8a6d3b;
+    --color-stat-item: #7a5c32;
+    --color-stat-value: #3d2a00;
+    --color-feedback-correct-bg: #d4edda;
+    --color-feedback-correct-text: #155724;
+    --color-feedback-correct-border: #28a745;
+    --color-feedback-incorrect-bg: #f8d7da;
+    --color-feedback-incorrect-text: #721c24;
+    --color-feedback-incorrect-border: #dc3545;
+    --color-mark-review-bg: #fff8e1;
+    --color-mark-review-text: #8a6d3b;
+    --color-mark-review-border: #e6b800;
+    --color-mark-review-active-shadow: rgba(230, 184, 0, 0.5);
+    --color-button-disabled-bg: #e0e0e0;
+    --color-button-disabled-text: #a0a0a0;
+    --color-progress-bar-bg: #f5e0cc;
+    --color-progress-bar-fill: #e67e22;
+}
+
+body.theme-dark {
+    /* Dark Theme (Warm Palette) */
+    --color-bg-primary: #2c221a; /* Deep warm brown */
+    --color-bg-card: #3d2a1e; /* Slightly lighter warm brown card */
+    --color-text-primary: #f0e6d6; /* Light cream text */
+    --color-text-secondary: #c7b299; /* Muted cream secondary text */
+    --color-accent-primary: #ff9800; /* Bright orange accent */
+    --color-accent-light: #5c3c22; /* Darker warm for selected option bg */
+    --color-border-light: #5a422e; /* Darker warm border */
+    --color-option-bg: #4a3324; /* Dark warm for option buttons */
+    --color-option-hover: #6a4a32; /* Lighter warm on hover */
+    --color-shadow-base: rgba(0, 0, 0, 0.7); /* Stronger dark shadow */
+    --color-question-text: #f0e6d6; /* Light cream for questions */
+    --color-score-display: #e6b800; /* Gold for score */
+    --color-stat-item: #c7b299; /* Stat item labels */
+    --color-stat-value: #f0e6d6; /* Stat item values */
+    --color-feedback-correct-bg: #38664a; /* Dark green for correct */
+    --color-feedback-correct-text: #a8e6cf;
+    --color-feedback-correct-border: #66bb6a;
+    --color-feedback-incorrect-bg: #6b2e2e; /* Dark red for incorrect */
+    --color-feedback-incorrect-text: #ff8a80;
+    --color-feedback-incorrect-border: #ef5350;
+    --color-mark-review-bg: #d69e2e; /* Darker yellow for review */
+    --color-mark-review-text: #2c221a;
+    --color-mark-review-border: #ffb300;
+    --color-mark-review-active-shadow: rgba(255, 179, 0, 0.5);
+    --color-button-disabled-bg: #5a422e;
+    --color-button-disabled-text: #998066;
+    --color-progress-bar-bg: #5a422e;
+    --color-progress-bar-fill: #ff9800;
+}
+
+/* Apply CSS variables to elements */
+body {
+    font-family: 'Times New Roman', serif; /* Changed font */
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth theme transition */
+    display: flex; /* Added for centering */
+    justify-content: center; /* Added for horizontal centering */
+    align-items: center; /* Added for vertical centering */
+    min-height: 100vh; /* Ensure full viewport height for centering */
+    padding: 20px; /* Keep some padding around the container */
+    box-sizing: border-box;
+}
+.quiz-container {
+    background-color: var(--color-bg-card);
+    box-shadow: 0 10px 30px var(--color-shadow-base);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth theme transition */
+    max-width: 90%; /* Use more screen width */
+    padding: 50px; /* Increased padding */
+    width: 100%; /* Ensure it takes full width up to max-width */
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    animation: fadeIn 0.6s ease-out;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.question-text {
+    font-size: 1.8rem; /* Larger font */
+    font-weight: 700; /* Bolder */
+    margin-bottom: 25px;
+    color: var(--color-question-text);
+    line-height: 1.4;
+}
+.option-button {
+    background-color: var(--color-option-bg);
+    color: var(--color-text-primary);
+    padding: 16px 30px; /* Increased padding */
+    border-radius: 10px; /* More rounded */
+    text-align: left;
+    width: 100%;
+    transition: all 0.3s ease; /* Smoother transitions */
+    cursor: pointer;
+    border: 1px solid var(--color-border-light);
+    font-size: 1.15rem; /* Larger font */
+    font-weight: 500;
+}
+.option-button:hover:not(.selected):not(.correct):not(.incorrect) {
+    background-color: var(--color-option-hover);
+    transform: translateY(-3px); /* More noticeable lift */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow on hover */
+}
+.option-button.selected {
+    border-color: var(--color-accent-primary);
+    background-color: var(--color-accent-light);
+    color: var(--color-text-primary);
+    box-shadow: 0 0 0 3px var(--color-accent-primary);
+    transform: scale(1.01); /* Slight scale effect */
+}
+.option-button.correct {
+    background-color: var(--color-feedback-correct-bg);
+    color: var(--color-feedback-correct-text);
+    border-color: var(--color-feedback-correct-border);
+    box-shadow: 0 0 0 3px var(--color-feedback-correct-border);
+    transform: scale(1.01);
+}
+.option-button.incorrect {
+    background-color: var(--color-feedback-incorrect-bg);
+    color: var(--color-feedback-incorrect-text);
+    border-color: var(--color-feedback-incorrect-border);
+    box-shadow: 0 0 0 3px var(--color-feedback-incorrect-border);
+    transform: scale(1.01);
+}
+.feedback-message {
+    margin-top: 20px; /* Increased margin */
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    animation: slideInUp 0.4s ease-out; /* Animation for feedback */
+}
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.feedback-message.correct {
+    background-color: var(--color-feedback-correct-bg);
+    color: var(--color-feedback-correct-text);
+    border: 1px solid var(--color-feedback-correct-border);
+}
+.feedback-message.incorrect {
+    background-color: var(--color-feedback-incorrect-bg);
+    color: var(--color-feedback-incorrect-text);
+    border: 1px solid var(--color-feedback-incorrect-border);
+}
+.navigation-button {
+    background-color: var(--color-accent-primary);
+    color: white;
+    padding: 16px 35px; /* Larger buttons */
+    border-radius: 10px;
+    font-weight: 700; /* Bolder text */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: auto;
+    min-width: 160px; /* Wider buttons */
+    text-align: center;
+    letter-spacing: 0.05em; /* Slightly spaced letters */
+    box-shadow: 0 4px 15px var(--color-shadow-base);
+}
+.navigation-button:hover {
+    filter: brightness(1.1); /* Subtle brightness change on hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px var(--color-shadow-base);
+}
+.navigation-button:disabled {
+    background-color: var(--color-button-disabled-bg);
+    color: var(--color-button-disabled-text);
+    cursor: not-allowed;
+    opacity: 0.7;
+    transform: none;
+    box-shadow: none;
+}
+.final-score {
+    color: var(--color-accent-primary);
+}
+.category-button {
+    background-color: var(--color-option-bg);
+    color: var(--color-text-primary);
+    padding: 15px 25px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    border: 1px solid var(--color-border-light);
+}
+.category-button:hover {
+    background-color: var(--color-option-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.category-button.selected-category {
+    background-color: var(--color-accent-primary);
+    color: white;
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 0 0 3px var(--color-accent-primary);
+}
+.quiz-stats-box {
+    background-color: var(--color-bg-primary); /* Use primary background for stats box */
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    border: 1px solid var(--color-border-light);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--color-stat-item);
+    font-weight: 500;
+}
+.stat-value {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-stat-value);
+}
+.mark-for-review-button {
+    background-color: var(--color-mark-review-bg);
+    color: var(--color-mark-review-text);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 1px solid var(--color-mark-review-border);
+}
+.mark-for-review-button:hover {
+    background-color: var(--color-mark-review-border);
+    color: white;
+}
+.mark-for-review-button.active {
+    background-color: var(--color-mark-review-border);
+    color: white;
+    box-shadow: 0 0 0 2px var(--color-mark-review-active-shadow);
+}
+.theme-toggle-button {
+    /* Styling for the theme toggle button */
+    background-color: var(--color-bg-card);
+    color: var(--color-text-primary);
+    border: 1px solid var(--color-border-light);
+    box-shadow: 0 2px 10px var(--color-shadow-base);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.theme-toggle-button:hover {
+    background-color: var(--color-option-hover);
+}
+.progress-bar-container {
+    width: 100%;
+    background-color: var(--color-progress-bar-bg);
+    border-radius: 5px;
+    height: 8px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--color-progress-bar-fill);
+    border-radius: 5px;
+    transition: width 0.3s ease-in-out;
+}
+.review-question-card {
+    background-color: var(--color-option-bg);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-border-light);
+}
+.review-question-card p {
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+.review-question-card .user-answer {
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+.review-question-card .correct-answer {
+    font-weight: 600;
+    color: var(--color-feedback-correct-text);
+}
+.review-question-card.marked-for-review {
+    border: 2px solid var(--color-mark-review-border);
+    background-color: var(--color-mark-review-bg);
+}
+.review-question-card.correct-answered {
+    border: 2px solid var(--color-feedback-correct-border);
+}
+.review-question-card.incorrect-answered {
+    border: 2px solid var(--color-feedback-incorrect-border);
+}
